@@ -1,8 +1,8 @@
-# Blood Donation Camp 2022 October
+# Marathon Amer, Jaipur 2023 September
 
-This web application is developed for blood donors to download their blood donation certificate.
+This web application is developed for marathon participants to download their participation certificate.
 
-The application also collects donors data and saves it in an excel format.
+The application does not collect any data or store them anywhere.
 
 During development of the application, two libraries have been used namely-> 
 * PDF-lib.js (https://pdf-lib.js.org/)  and 
