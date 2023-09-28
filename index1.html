@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon</title>
+    <link rel="stylesheet" href="style1.css"> <!-- Link to the external CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.16.0/dist/pdf-lib.js"></script>
+    <link rel="favicon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Responsive Banner with Image -->
+    <div class="banner">
+        <img src="banner.jpg" alt="Banner Image">
+    </div>
+
+    <div class="event-info collapsed">
+        <h2>आमेर मैराथन दौड़ प्रतियोगिता</h2>
+        <p>
+            आमेर के युवाओं के उत्थान एवं युवाओं में फिटनेस और खेलों के प्रति जागरुकता लाने के उद्देश्य से डॉ. सतीश पूनियां जी द्वारा मैराथन दौड़ प्रतियोगिता “रन फॉर आमेर” आयोजित की जाएगी। आमेर के चारों मंडलों के युवाओं हेतु अलग-अलग तिथि को आयोजित होगी। इस प्रतियोगिता में हर मंडल के प्रथम, द्वितीय और तृतीय आने वाले प्रतिभागियों को मोबाइल फोन, चतुर्थ से 100वें स्थान तक आने वाले प्रतिभागियों को ट्रैक सूट एवं अन्य सभी प्रतिभागियों को टीशर्ट प्रोत्साहन पुरस्कार के रूप में दी जाएगी।
+        </p>
+        <p class="read-more">और पढ़ें</p>
+    </div>
+    <div class="container">
+        <!-- Your form content here -->
+        <h2>पंजीकरण फार्म</h2>
+        <form>
+            <label class="required-label" for="name">पूरा नाम:</label>
+            <input type="text" id="name" name="name" required>
+            
+        <!--    <label class="required-label" for="fathername">पिता का नाम:</label>
+            <input type="text" id="fathername" name="fathername" required>
+            
+            <label class="required-label" for="mandal">मंडल:</label>
+            <select id="mandal" name="mandal" required>
+                <option value="">-- चयन करें --</option>
+                <option value="मानपुरा मंडल">मानपुरा मंडल</option>
+                <option value="रामपुरा मंडल">रामपुरा मंडल</option>
+                <option value="अचरोल मंडल">अचरोल मंडल</option>
+                <option value="जालसू मंडल">जालसू मंडल</option>
+                <option value="आमेर सिटी">आमेर सिटी</option>
+            </select>
+            
+            <label class="required-label" for="address">पूरा पता:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="email">ईमेल आईडी (वैकल्पिक):</label>
+            <input type="email" id="email" name="email">
+            
+            <label class="required-label" for="mobile">मोबाइल नंबर:</label>
+            <input type="text" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" required>-->
+            
+            <!-- Add a button for generating and downloading the PDF -->
+            <button id="submitBtn">Submit and Download</button>
+            <!-- <button type="submit">पंजीकरण करें</button>-->
+        </form>
+    </div>
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="./FileSaver.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="./scripts.js"></script>
+
+    <script>
+        // JavaScript to toggle the "Read more" functionality
+        const eventInfo = document.querySelector('.event-info');
+        const readMoreButton = eventInfo.querySelector('.read-more');
+
+        readMoreButton.addEventListener('click', function () {
+            eventInfo.classList.toggle('expanded');
+            if (eventInfo.classList.contains('expanded')) {
+                readMoreButton.style.display = 'none';
+            } else {
+                readMoreButton.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
